@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="card w-25 p-3 manualstyles">
+    <div class="card-header">
+        Product
+    </div>
+    <form class="addproduct" method="post" action="/addproduct">
+    {% csrf_token %}
+        <div class="card-body">
+            <h5 class="card-title"> <label> Enter product Id: </label>
+                <input type="Text" name="productid" id="productid" class="my-2">
+            </h5>
+            <h5 class="card-title"> <label> Enter product Name: </label>
+                <input type="Text" name="productname" id="productname" class="my-2">
+            </h5>
+            <h5 class="card-title"> <label> Enter product Type: </label>
+                <input type="Text" name="producttype" id="producttype" class="my-2">
+            </h5>
+            <h5 class="card-title"> <label> Enter product Supplier: </label>
+                <input type="Text" name="productsupplier" id="productsupplier" class="my-2">
+            </h5>
+            <h5 class="card-title"> <label> Enter product Quantity: </label>
+                <input type="Text" name="productqty" id="productqty" class="my-2">
+            </h5>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}
